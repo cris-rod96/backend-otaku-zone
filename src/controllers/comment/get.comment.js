@@ -26,7 +26,7 @@ const getCommentByID = async (req, res) => {
     });
   }
 };
-const getCommentByUsers = async (req, res) => {
+const getCommentsByUser = async (req, res) => {
   try {
     const { user_id } = req.params;
     const comments = await Comment.findAll({
@@ -42,7 +42,7 @@ const getCommentByUsers = async (req, res) => {
     });
   }
 };
-const getCommentByAnimes = async (req, res) => {
+const getCommentsByAnime = async (req, res) => {
   try {
     const { anime_id } = req.params;
     const animes = await Comment.findAll({
@@ -62,6 +62,6 @@ const getCommentByAnimes = async (req, res) => {
 export default {
   getAllComments,
   getCommentByID,
-  getCommentByUsers,
-  getCommentByAnimes,
+  getCommentsByUser,
+  getCommentsByAnime,
 };

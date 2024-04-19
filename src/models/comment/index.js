@@ -17,6 +17,10 @@ export const CommentModel = (sequelize) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
+      statsus: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+      },
 
       // Foreign Keys
       UserId: {
