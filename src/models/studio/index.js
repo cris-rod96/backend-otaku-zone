@@ -1,9 +1,9 @@
 import { DataTypes } from "sequelize";
 import { ENUMS } from "../../config/index.js";
 
-export const AuthorModel = (sequelize) => {
+export const StudioModel = (sequelize) => {
   sequelize.define(
-    "Author",
+    "Studio",
     {
       id: {
         type: DataTypes.UUID,
@@ -15,26 +15,18 @@ export const AuthorModel = (sequelize) => {
         allowNull: false,
         unique: true,
       },
-      origin: {
+      location: {
         type: DataTypes.ENUM,
         allowNull: false,
         values: ENUMS.countries,
       },
-      age: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          min: 18,
-          max: 90,
-        },
-      },
-      isDead: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-      },
       status: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
+      },
+      isClosed: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
       },
     },
     {

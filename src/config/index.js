@@ -1,3 +1,4 @@
-import { config } from "dotenv";
-config();
-export const { HOST_PORT, POSTGRES_URI } = process.env;
+import ENUMS from "./enums/index.js";
+import { HOST_PORT, POSTGRES_URI } from "./envs/index.js";
+
+export { ENUMS, HOST_PORT, POSTGRES_URI };

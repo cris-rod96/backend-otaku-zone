@@ -1,36 +1,43 @@
 import { DataTypes } from "sequelize";
-import { ENUMS } from "../../config/index.js";
 
-export const AuthorModel = (sequelize) => {
+export const UserModel = (sequelize) => {
   sequelize.define(
-    "Author",
+    "User",
     {
       id: {
         type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
       },
+
       name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      nick: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
       },
-      origin: {
-        type: DataTypes.ENUM,
+      email: {
+        type: DataTypes.STRING,
         allowNull: false,
-        values: ENUMS.countries,
-      },
-      age: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+        unique: true,
         validate: {
-          min: 18,
-          max: 90,
+          isEmail: true,
         },
       },
-      isDead: {
-        type: DataTypes.BOOLEAN,
+      password: {
+        type: DataTypes.STRING,
         allowNull: false,
+      },
+      sub_auth: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
       status: {
         type: DataTypes.BOOLEAN,
