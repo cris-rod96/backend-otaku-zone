@@ -1,21 +1,6 @@
-import mongoose from "mongoose";
-import { MONGO_URI } from "../config/index.js";
-const { connect, connection } = mongoose;
+import { Sequelize } from "sequelize";
+import { POSTGRES_URI } from "../config/index.js";
 
-const connectionInstance = {
-  isConnected: false,
-};
-export const connectDB = async () => {
-  if (connectionInstance.isConnected) return;
+const sequelize = new Sequelize(POSTGRES_URI);
 
-  try {
-    const conn = await connect(MONGO_URI);
-    connectionInstance.isConnected = conn.connections[0].readyState;
-  } catch (error) {
-    throw new Error("Error en la conexión: ", error.message);
-  }
-};
-
-connection.on("connected", () => {
-  console.log("Base de datos conectada");
-});
+export { sequelize };
