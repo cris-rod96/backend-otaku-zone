@@ -1,6 +1,6 @@
 import { Reaction } from "../../database/index.js";
 
-export default updateReaction = async (req, res) => {
+const updateReaction = async (req, res) => {
   try {
     const data = req.body;
     const [rows, _] = await Reaction.update(data, {
@@ -19,3 +19,5 @@ export default updateReaction = async (req, res) => {
     return res.status(500).json({ error: message });
   }
 };
+
+export default updateReaction;

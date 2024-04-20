@@ -1,6 +1,6 @@
 import { Reaction } from "../../database/index.js";
 
-export default saveNewReaction = async (req, res) => {
+const saveNewReaction = async (req, res) => {
   try {
     const data = req.body;
     await Reaction(data);
@@ -13,3 +13,4 @@ export default saveNewReaction = async (req, res) => {
     });
   }
 };
+export default saveNewReaction;

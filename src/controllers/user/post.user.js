@@ -1,6 +1,6 @@
 import { User } from "../../database/index.js";
 
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
   try {
     const data = req.body;
     const newUser = await User.create(data);
@@ -11,3 +11,5 @@ export const registerUser = async (req, res) => {
     });
   }
 };
+
+export default registerUser;

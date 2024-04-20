@@ -1,6 +1,6 @@
 import { request } from "express";
 import { jwtHelpers } from "../../helpers/index.js";
-import { User } from "../../database";
+import { User } from "../../database/index.js";
 
 const verifyToken = async (req = request, res, next) => {
   try {

@@ -1,6 +1,6 @@
 import { Author } from "../../database/index.js";
 
-export default updateAuthor = async (req, res) => {
+const updateAuthor = async (req, res) => {
   try {
     const { id } = req.params;
     const data = req.body;
@@ -22,3 +22,4 @@ export default updateAuthor = async (req, res) => {
     });
   }
 };
+export default updateAuthor;

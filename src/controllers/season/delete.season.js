@@ -1,6 +1,6 @@
 import { Season } from "../../database/index.js";
 
-export default deleteSeason = async (req, res) => {
+const deleteSeason = async (req, res) => {
   try {
     const { season_id } = req.params;
     const [rows, _] = await Season.update(
@@ -24,3 +24,4 @@ export default deleteSeason = async (req, res) => {
     });
   }
 };
+export default deleteSeason;

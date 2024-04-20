@@ -1,6 +1,6 @@
 import { Anime } from "../../database/index.js";
 
-export const updateAnime = async (req, res) => {
+const updateAnime = async (req, res) => {
   try {
     const { id } = req.params;
     const data = req.body;
@@ -16,3 +16,4 @@ export const updateAnime = async (req, res) => {
     });
   }
 };
+export default updateAnime;

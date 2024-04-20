@@ -1,6 +1,6 @@
 import { Anime } from "../../database/index.js";
 
-export const createAnime = async (req, res) => {
+const createAnime = async (req, res) => {
   try {
     const data = req.body;
     const newAnime = await Anime.create(data);
@@ -13,3 +13,5 @@ export const createAnime = async (req, res) => {
     });
   }
 };
+
+export default createAnime;

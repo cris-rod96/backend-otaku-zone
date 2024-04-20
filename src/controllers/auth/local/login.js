@@ -1,6 +1,6 @@
 import { User } from "../../../database/index.js";
 
-export default loginWithPassword = async (req, res) => {
+const loginWithPassword = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
@@ -25,3 +25,5 @@ export default loginWithPassword = async (req, res) => {
     });
   }
 };
+
+export default loginWithPassword;

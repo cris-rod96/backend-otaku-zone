@@ -1,6 +1,5 @@
 import { User } from "../../database/index.js";
-
-export const deleteUser = async (req, res) => {
+const deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
     const [rows, _] = await User.update({ status: false }, { where: { id } });
@@ -17,3 +16,5 @@ export const deleteUser = async (req, res) => {
     });
   }
 };
+
+export default deleteUser;

@@ -1,6 +1,6 @@
 import { Anime } from "../../database/index.js";
 
-export const deleteAnime = async (req, res) => {
+const deleteAnime = async (req, res) => {
   try {
     const { id } = req.params;
     const [rows, _] = await Anime.update(
@@ -18,3 +18,5 @@ export const deleteAnime = async (req, res) => {
     });
   }
 };
+
+export default deleteAnime;

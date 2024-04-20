@@ -1,6 +1,6 @@
 import { Author } from "../../database/index.js";
 
-export default deleteAuthor = async (req, res) => {
+const deleteAuthor = async (req, res) => {
   try {
     const { id, status } = req.params;
     const [rows, _] = await Author.update(
@@ -22,3 +22,5 @@ export default deleteAuthor = async (req, res) => {
     });
   }
 };
+
+export default deleteAuthor;

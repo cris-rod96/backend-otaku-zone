@@ -1,6 +1,6 @@
 import { Studio } from "../../database/index.js";
 
-export const updateStudio = async (req, res) => {
+const updateStudio = async (req, res) => {
   try {
     const { id } = req.params;
     const data = req.body;
@@ -16,3 +16,4 @@ export const updateStudio = async (req, res) => {
     });
   }
 };
+export default updateStudio;

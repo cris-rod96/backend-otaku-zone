@@ -1,6 +1,6 @@
 import { Season } from "../../database/index.js";
 
-export default updateSeason = async (req, res) => {
+const updateSeason = async (req, res) => {
   try {
     const { season_id } = req.params;
     const data = req.body;
@@ -22,3 +22,4 @@ export default updateSeason = async (req, res) => {
     });
   }
 };
+export default updateSeason;

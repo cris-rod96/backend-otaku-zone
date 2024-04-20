@@ -1,6 +1,6 @@
 import { Comment } from "../../database/index.js";
 
-export default deleteComment = async (req, res) => {
+const deleteComment = async (req, res) => {
   try {
     const { id } = req.body;
     const [rows, _] = await Comment.update(
@@ -20,3 +20,5 @@ export default deleteComment = async (req, res) => {
     });
   }
 };
+
+export default deleteComment;

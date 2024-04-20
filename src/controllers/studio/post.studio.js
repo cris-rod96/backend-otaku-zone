@@ -1,6 +1,6 @@
 import { Studio } from "../../database/index.js";
 
-export const createStudio = async (req, res) => {
+const createStudio = async (req, res) => {
   try {
     const data = req.body;
     const newStudio = await Studio.create(data);
@@ -13,3 +13,5 @@ export const createStudio = async (req, res) => {
     });
   }
 };
+
+export default createStudio;

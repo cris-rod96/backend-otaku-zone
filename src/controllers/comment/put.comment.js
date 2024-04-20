@@ -1,6 +1,6 @@
 import { Comment } from "../../database/index.js";
 
-export default updateComment = async (req, res) => {
+const updateComment = async (req, res) => {
   try {
     const { id } = req.body;
     const data = req.body;
@@ -18,3 +18,4 @@ export default updateComment = async (req, res) => {
     });
   }
 };
+export default updateComment;

@@ -1,6 +1,6 @@
 import { Reaction } from "../../database/index.js";
 
-export default deleteReaction = async (req, res) => {
+const deleteReaction = async (req, res) => {
   try {
     const { reaction_id } = req.body;
     await Reaction.destroy({
@@ -17,3 +17,4 @@ export default deleteReaction = async (req, res) => {
     });
   }
 };
+export default deleteReaction;

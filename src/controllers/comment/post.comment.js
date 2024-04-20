@@ -1,6 +1,6 @@
 import { Comment } from "../../database/index.js";
 
-export default createComment = async (req, res) => {
+const createComment = async (req, res) => {
   try {
     const data = req.body;
     await Comment.create(data);
@@ -13,3 +13,5 @@ export default createComment = async (req, res) => {
     });
   }
 };
+
+export default createComment;

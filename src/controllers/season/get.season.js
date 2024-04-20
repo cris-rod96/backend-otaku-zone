@@ -1,4 +1,4 @@
-import { Season } from "../../database";
+import { Season } from "../../database/index.js";
 
 const getAllSeasons = async (req, res) => {
   try {

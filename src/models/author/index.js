@@ -28,6 +28,10 @@ export const AuthorModel = (sequelize) => {
           max: 90,
         },
       },
+      photo: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       isDead: {
         type: DataTypes.BOOLEAN,
         allowNull: false,

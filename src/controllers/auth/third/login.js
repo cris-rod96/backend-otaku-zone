@@ -1,6 +1,6 @@
 import { User } from "../../../database/index.js";
 
-export default loginWithGoogle = async (req, res) => {
+const loginWithGoogle = async (req, res) => {
   try {
     const { sub_auth, email } = req.body;
     const user = await User.findOne({ where: { email } });
@@ -24,3 +24,4 @@ export default loginWithGoogle = async (req, res) => {
     });
   }
 };
+export default loginWithGoogle;

@@ -1,6 +1,6 @@
 import { Studio } from "../../database/index.js";
 
-export const deleteStudio = async (req, res) => {
+const deleteStudio = async (req, res) => {
   try {
     const { id } = req.params;
     const [rows, _] = await Studio.update({ status: false }, { where: { id } });
@@ -15,3 +15,4 @@ export const deleteStudio = async (req, res) => {
     });
   }
 };
+export default deleteStudio;
