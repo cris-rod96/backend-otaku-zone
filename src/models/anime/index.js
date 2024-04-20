@@ -20,6 +20,10 @@ export const AnimeModel = (sequelize) => {
         allowNull: false,
         unique: true,
       },
+      overview: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
       score_avg: {
         type: DataTypes.FLOAT,
       },
@@ -51,6 +55,10 @@ export const AnimeModel = (sequelize) => {
             if (!genrerFound) throw new Error("Género no válido");
           },
         },
+      },
+      release_year: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       status: {
         type: DataTypes.ENUM,

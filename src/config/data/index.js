@@ -32,16 +32,19 @@ export const authors = [
   {
     name: "Hiromu Arakawa",
     origin: "Japón",
+    age: 78,
     isDead: false,
   },
   {
     name: "Kentaro Miura",
     origin: "Japón",
+    age: 80,
     isDead: true,
   },
   {
     name: "CLAMP",
     origin: "Japón",
+    age: 87,
     isDead: false,
   },
   {
@@ -71,6 +74,7 @@ export const authors = [
   {
     name: "Yukito Kishiro",
     origin: "Japón",
+    age: 45,
     isDead: false,
   },
   {
@@ -82,6 +86,7 @@ export const authors = [
   {
     name: "Ai Yazawa",
     origin: "Japón",
+    age: 78,
     isDead: false,
   },
   {
@@ -93,11 +98,13 @@ export const authors = [
   {
     name: "Natsuki Takaya",
     origin: "Japón",
+    age: 56,
     isDead: false,
   },
   {
     name: "Yoshiyuki Sadamoto",
     origin: "Japón",
+    age: 45,
     isDead: false,
   },
   {
@@ -365,7 +372,7 @@ export const animes = [
     poster:
       "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Touchvolume1.jpg/220px-Touchvolume1.jpg",
     type: "TV",
-    genres: ["Deporte", "Drama", "Romance"],
+    genres: ["Deportes", "Drama", "Romance"],
     status: "Finalizado",
     name_author: "Mitsuru Adachi",
     studio_name: "TMS Entertainment",

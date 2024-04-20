@@ -6,6 +6,7 @@ import commentRoutes from "./comment/index.routes.js";
 import reactionRoutes from "./reaction/index.routes.js";
 import seasonRoutes from "./season/index.routes.js";
 import userRoutes from "./user/index.routes.js";
+import studioRoutes from "./studio/index.routes.js";
 const routes = Router();
 
 routes.use("/animes", animeRoutes);
@@ -14,6 +15,7 @@ routes.use("/auth", authRoutes);
 routes.use("/comments", commentRoutes);
 routes.use("/reactions", reactionRoutes);
 routes.use("/seasons", seasonRoutes);
+routes.use("/studios", studioRoutes);
 routes.use("/users", userRoutes);
 
 export default routes;

@@ -5,6 +5,8 @@ const genres = [
   "Drama",
   "Fantasía",
   "Magia",
+  "Magical Girl",
+  "Cyberpunk",
   "Mecha",
   "Misterio",
   "Psicológico",
@@ -19,6 +21,7 @@ const genres = [
   "Histórico",
   "Escolar",
   "Shoujo",
+  "Mahō shōjo",
   "Shounen",
   "Seinen",
   "Josei",
@@ -222,7 +225,7 @@ const countries = [
   "Zimbabue",
 ];
 const types = ["TV", "Película", "Especial", "OVA"];
-const status = ["Emisión", "Finalizado", "Próximamente", "En Cuarentena"];
+const status = ["En emisión", "Finalizado", "Próximamente", "En Cuarentena"];
 const reactions = [
   "Me gusta",
   "No me gusta",

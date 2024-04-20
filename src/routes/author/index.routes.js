@@ -9,8 +9,8 @@ router.get("/view/:id", authorControllers.getAuthors.getAuthorByID);
 // Actions only by admins
 router.get(
   "/list",
-  jwtMiddlewares.verifyToken,
-  jwtMiddlewares.isAdmin,
+  // jwtMiddlewares.verifyToken,
+  // jwtMiddlewares.isAdmin,
   authorControllers.getAuthors.getAllAuthors
 );
 router.get(
