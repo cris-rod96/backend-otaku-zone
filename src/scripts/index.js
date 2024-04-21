@@ -1,5 +1,11 @@
-import { Author, Studio, Anime, Season } from "../database/index.js";
-import { authors, studios, animes, seasons } from "../config/data/index.js";
+import { Author, Studio, Anime, Season, User } from "../database/index.js";
+import {
+  authors,
+  studios,
+  animes,
+  seasons,
+  users,
+} from "../config/data/index.js";
 
 export const dbLoader = async (req, res) => {
   try {
@@ -7,6 +13,7 @@ export const dbLoader = async (req, res) => {
     const studiosDB = await Studio.findAll();
     const animesDB = await Anime.findAll();
     const seasonsDB = await Season.findAll();
+    const usersDB = await User.findAll();
     if (authorsDB.length < authors.length) {
       await Author.bulkCreate(authors);
     }
@@ -38,6 +45,10 @@ export const dbLoader = async (req, res) => {
         };
         await Anime.create(newAnime);
       }
+    }
+
+    if (usersDB.length < users.length) {
+      await User.bulkCreate(users);
     }
   } catch (error) {
     console.log(error);

@@ -3,7 +3,11 @@ import { User } from "../../database/index.js";
 
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.findAll();
+    const users = await User.findAll({
+      attributes: {
+        exclude: ["password"],
+      },
+    });
     return res.status(200).json(users);
   } catch ({ message }) {
     return res.status(500).json({
@@ -15,7 +19,11 @@ const getAllUsers = async (req, res) => {
 const getUserByID = async (req, res) => {
   try {
     const { id } = req.params;
-    const user = await User.findByPk(id);
+    const user = await User.findByPk(id, {
+      attributes: {
+        exclude: ["password"],
+      },
+    });
 
     return user
       ? res.status(200).json(user)
@@ -37,6 +45,10 @@ const getUserByName = async (req, res) => {
         name: {
           [Op.iLike]: `%${name}%`,
         },
+      },
+
+      attributes: {
+        exclude: ["password"],
       },
     });
 

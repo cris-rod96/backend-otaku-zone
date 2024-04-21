@@ -1485,3 +1485,21 @@ export const seasons = [
     name_anime: "Demon Slayer: Kimetsu no Yaiba",
   },
 ];
+
+export const users = [
+  {
+    name: "Cristhian Rodríguez",
+    nick: "Asmodeus",
+    email: "crisrodam1996@gmail.com",
+    password: "a12b32*",
+    isAdmin: true,
+  },
+  {
+    name: "Gabriel Amon",
+    nick: "Sempai",
+    email: "cirsthian_elgrande@hotmail.com",
+    password: "a12b32*",
+    isAdmin: false,
+    status: false,
+  },
+];
